@@ -8,7 +8,14 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path : "/index",
-    component : import("@/components/index/index.vue") 
+    component : import("@/components/index/index.vue"),
+    children : [
+
+    ]
+  },
+  {
+    path : "/Submit",
+    component : import("@/components/Submit/Submit.vue")
   }
 ]
 
