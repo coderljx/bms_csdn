@@ -47,7 +47,7 @@ import Editor from '@tinymce/tinymce-vue'
 import tinymce from "tinymce";
 import {onMounted, ref} from "vue";
 import { Plus } from '@element-plus/icons-vue'
-const api : string = "http://localhost:9002/titleService/api";
+const api : string = "titleService/api";
 const coverPhoto = ref();
 const imageUrl = ref(false);
 const coverTitle = ref("");
