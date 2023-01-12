@@ -5,18 +5,60 @@
 <!--    博客网站主体部分-->
     <div class="blogContext">
       <div class="bgColorH">
-        <div class="menu public bgColorWithe cursorHeader">
-          <span>后端</span>
-          <span>前端</span>
-          <span>移动开发</span>
-          <span>编程语言</span>
-          <span>Java</span>
-          <span>Python</span>
-          <span>人工智能</span>
-          <span>大数据</span>
-          <span>数据结构与算法</span>
-          <span>cc</span>
-
+        <div class="menu public bgColorWithe cursorHoud">
+          <span v-for="(item,index) in index.moduleData.value">{{item.moduleName}}</span>
+        </div>
+        <div class="public recommend">
+          <div class="recommend1">
+            <div class="recommend1-top">
+              <img class="imgLimit24" src="../../assets/20220107104621.png">
+              <strong>头条</strong>
+            </div>
+            <div class="recommend1-bottom">
+              <img class="imgLimitHei240" src="../../assets/20230112025204.jpg">
+              <div style="margin: 5px 0;"><a class="txtHearder" href="#">崔宝秋国际开源经验在小米开花 | 开源英雄</a></div>
+              <div><a class="fontSizeLimit13">从IBM、雅虎、LinkedIn 到小米这一路走来，从一个开源的追随者成长为开源的推动者，小米的开源文化、丰硕的成果输出、吸引开源创造者，他始终都是核心所在。</a></div>
+            </div>
+          </div>
+          <div class="recommend2">
+            <div class="recommend2-top">
+              <img class="imgLimit20 marRi10" src="../../assets/left.png">
+              <img class="imgLimit20" src="../../assets/right.png">
+            </div>
+            <div class="recommend2-bottom">
+              <div class="recommendDiv" v-for="(item,index) in 5">
+                <a class="txtHearder">Apache 顶级开源项目的突围之路！</a>
+                <a class="fontSizeLimit13 marTop5">开源发展，已经从蓝海变为红海</a>
+              </div>
+            </div>
+          </div>
+          <div class="recommend3">
+            <div class="recommend3-top">
+              <div class="divInblok">
+                <img class="imgLimit24" src="../../assets/redian.png">
+                <strong>热点</strong>
+              </div>
+              <div  class="divInblok" style="float: right">
+                <img class="imgLimit20 marRi10" src="../../assets/left.png">
+                <img class="imgLimit20" src="../../assets/right.png">
+              </div>
+            </div>
+            <div class="recommend2-bottom">
+              <div class="recommendDiv" v-for="(item,index) in 5">
+                <a class="txtHearder">Apache 顶级开源项目的突围之路！</a>
+                <a class="fontSizeLimit13 marTop5">开源发展，已经从蓝海变为红海</a>
+              </div>
+            </div>
+          </div>
+          <div class="recommend4">
+              <div class="block text-center">
+                <el-carousel>
+                  <el-carousel-item v-for="item in 4" :key="item">
+                    <h3 class="small justify-center" text="2xl">asdasd</h3>
+                  </el-carousel-item>
+                </el-carousel>
+              </div>
+          </div>
         </div>
       </div>
     </div>

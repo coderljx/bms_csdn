@@ -1,9 +1,15 @@
 import {httpGet,httpPost} from "@/axios/axios"
+import {ref} from "vue";
+import {ApiReturn} from "@/utils/uutils";
 
 export class Index {
     constructor() {
         this.loadModule();
     };
+
+    public apiUrl = "titleService/api/";
+    public moduleData = ref([]);
+
 
     public userLogin() {
 
@@ -13,7 +19,10 @@ export class Index {
      * 加载所有的模块
      */
     public loadModule() {
-        httpGet("titleService/api/class/get",{koko : 123,koks : 123}).then(data => {
+        httpGet(this.apiUrl + "class/get",{}).then(data => {
+            if (ApiReturn(data)) {
+                this.moduleData.value = data.data.data;
+            }
         });
     }
 

@@ -3,6 +3,7 @@
 }
 .bgColorH {
     background: #efefef;
+    padding-top: 10px;
 }
 .bgColorWithe {
     background : #fdfcfc
@@ -14,15 +15,54 @@
     height: 100%;
 }
 .public {
-    width: 60%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 10px auto;
+    box-sizing: border-box;
 }
-.blogContext  span {
-    margin: 0;
-    padding: 0;
+.menu span {
+    padding: 10px;
     display: inline-block;
-    margin-right: 37px;
+    margin: 0 37px 0 0;
+    color: rgb(85, 86, 127);
 }
 .menu {
     padding: 24px 24px 0 24px;
+}
+
+.recommend {
+    display: flex;
+    height: 400px;
+}
+.recommend1 {
+    width: 30%;
+}
+.recommend2,.recommend3,.recommend4 {
+    flex: 1;
+    padding: 0 20px;
+}
+.recommend2-top {
+    width: 40px;
+    float: right
+}
+.recommend2-bottom {
+    clear: both;
+    content: "";
+}
+.recommendDiv {
+    padding-top: 16px;
+    height: 50px;
+}
+.recommendDiv a {
+    display: block;
+}
+.txtHearder {
+    font-weight:bold;
+    color:black;
+}
+/*走马灯*/
+.el-carousel__container {
+    height: 400px;
+}
+.el-carousel__indicators {
+    width: 100%;
 }

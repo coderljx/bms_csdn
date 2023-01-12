@@ -1,5 +1,9 @@
 # blog
 
+##Detail
+
+本项目按照CSDN进行1 ：1仿造
+
 ## Project setup
 ```
 npm install
