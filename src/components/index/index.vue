@@ -61,6 +61,34 @@
           </div>
         </div>
       </div>
+
+<!--      内容部分-->
+      <div class="bgColorY">
+        <div class="bgBody public">
+          <div class="bgContext-left">
+            <el-menu
+                :default-active="activeIndex"
+                class="el-menu-demo"
+                mode="horizontal"
+                @select="handleSelect"
+            >
+                <el-menu-item index="follow">关注</el-menu-item>
+                <el-menu-item index="recommend">推荐</el-menu-item>
+                <el-menu-item index="info">资讯</el-menu-item>
+                <el-menu-item index="4">热榜</el-menu-item>
+            </el-menu>
+
+<!--            动态切换后，显示不同的路由-->
+            <router-view />
+          </div>
+
+
+
+          <div class="bgContext-right">asdasdas</div>
+        </div>
+    </div>
+
+
     </div>
 
   </div>
@@ -71,9 +99,17 @@
 import {Index} from "./index"
 // 导入头部组件
 import headers from "../Header/header.vue"
+import {getCurrentInstance} from "vue";
+import {Router} from "vue-router";
+
 
 const index = new Index();
+const instanse = getCurrentInstance();
 
+const handleSelect = (data : any) => {
+  let route = instanse?.proxy?.$router as Router;
+  route.push("/index/" + data);
+}
 
 
 </script>
