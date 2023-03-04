@@ -6,7 +6,7 @@
     <div class="blogContext">
       <div class="bgColorH">
         <div class="menu public bgColorWithe cursorHoud">
-          <span v-for="(item,index) in index.moduleData.value">{{item.moduleName}}</span>
+          <span v-for="(item,index) in index.moduleData.value" :key="index">{{item.moduleName}}</span>
         </div>
         <div class="public recommend">
           <div class="recommend1">
@@ -26,7 +26,7 @@
               <img class="imgLimit20" src="../../assets/right.png">
             </div>
             <div class="recommend2-bottom">
-              <div class="recommendDiv" v-for="(item,index) in 5">
+              <div class="recommendDiv" v-for="(item,index) in 5" :key="index">
                 <a class="txtHearder">Apache 顶级开源项目的突围之路！</a>
                 <a class="fontSizeLimit13 marTop5">开源发展，已经从蓝海变为红海</a>
               </div>
@@ -44,7 +44,7 @@
               </div>
             </div>
             <div class="recommend2-bottom">
-              <div class="recommendDiv" v-for="(item,index) in 5">
+              <div class="recommendDiv" v-for="(item,index) in 5" :key="index">
                 <a class="txtHearder">Apache 顶级开源项目的突围之路！</a>
                 <a class="fontSizeLimit13 marTop5">开源发展，已经从蓝海变为红海</a>
               </div>
@@ -106,7 +106,12 @@ import {Router} from "vue-router";
 const index = new Index();
 const instanse = getCurrentInstance();
 
-const handleSelect = (data : any) => {
+
+/**
+ * 再选择后进行路由的跳转,(对应的路由规则已经匹配完成)
+ * @param data
+ */
+const handleSelect = (data : any) : void => {
   let route = instanse?.proxy?.$router as Router;
   route.push("/index/" + data);
 }
