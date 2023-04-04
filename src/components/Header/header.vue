@@ -68,7 +68,7 @@ import {ref,onMounted} from 'vue'
 import {httpGet,httpPost} from "@/axios/axios";
 import {ApiReturn} from "@/utils/uutils"
 
-const api : string = "http://localhost:9001/userService/api";
+const api : string = "http://localhost/userService/api";
 let search = ref("");
 let loginDig = ref(false); // 打开登录弹框
 let phone = ref("15071452117");
@@ -88,13 +88,12 @@ const sendLogin = () => {
     status : 1
   };
 
-  httpPost(api + "/user/login/1",obj).then(data => {
+  httpPost(api + "/user/login",obj).then(data => {
     if (ApiReturn(data)) {
       window.localStorage.setItem("user",JSON.stringify(data.data.data));
       user.value = data.data.data.name;
     }
   })
-
 }
 
 const jumpSubmit = () => {
@@ -112,7 +111,11 @@ const login = () => {
 
 
 onMounted(() => {
-  // window.localStorage.setItem("user",JSON.stringify({userid : 31}));
+  let user2 = window.localStorage.getItem("user");
+  if (user2 != undefined) {
+    let userData = JSON.parse(user2);
+    user.value = userData.name;
+  }
 })
 
 </script>

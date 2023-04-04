@@ -53,8 +53,8 @@
           <div class="recommend4">
               <div class="block text-center">
                 <el-carousel>
-                  <el-carousel-item v-for="item in 4" :key="item">
-                    <h3 class="small justify-center" text="2xl">asdasd</h3>
+                  <el-carousel-item v-for="item in index.advLinks.value" :key="item">
+                    <img v-bind:src="item" />
                   </el-carousel-item>
                 </el-carousel>
               </div>
@@ -65,9 +65,10 @@
 <!--      内容部分-->
       <div class="bgColorY">
         <div class="bgBody public">
+<!--          内容部分左侧               :default-active="activeIndex"  -->
           <div class="bgContext-left">
             <el-menu
-                :default-active="activeIndex"
+   
                 class="el-menu-demo"
                 mode="horizontal"
                 @select="handleSelect"
@@ -82,12 +83,12 @@
             <router-view />
           </div>
 
-
-
-          <div class="bgContext-right">asdasdas</div>
+<!--          内容部分右侧-->
+          <div class="bgContext-right">
+            <activice></activice>
+          </div>
         </div>
     </div>
-
 
     </div>
 
@@ -99,13 +100,16 @@
 import {Index} from "./index"
 // 导入头部组件
 import headers from "../Header/header.vue"
-import {getCurrentInstance} from "vue";
+import {getCurrentInstance,onMounted} from "vue";
 import {Router} from "vue-router";
-
+import Mock from "mockjs";
+import activice from "@/components/index/layout/activice/activice.vue";
 
 const index = new Index();
 const instanse = getCurrentInstance();
 
+
+onMounted(() => {});
 
 /**
  * 再选择后进行路由的跳转,(对应的路由规则已经匹配完成)
@@ -119,6 +123,5 @@ const handleSelect = (data : any) : void => {
 
 </script>
 
-<style>
-@import "index.css";
+<style src="./index.css">
 </style>

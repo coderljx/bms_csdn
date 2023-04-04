@@ -34,7 +34,7 @@ ul {
     height: 50px;
     display: inline-block;
 }
-ul > li {
+.blogBody ul > li {
     list-style: none;
     display: inline-block;
     line-height: 50px;
@@ -43,15 +43,15 @@ ul > li {
     font-size: 14px;
     padding: 0 5px;
 }
-ul::after,
-li::after{
+.blogBody ul::after,
+.blogBody li::after{
     content: "";
     clear: both;
 }
-ul > li:hover {
+.blogBody ul > li:hover {
     background: #c6c6c6;
 }
-ul > li a {
+.blogBody ul > li a {
     text-decoration: none;
     color: inherit;
 }

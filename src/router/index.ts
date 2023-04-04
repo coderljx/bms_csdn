@@ -29,6 +29,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path : "/Submit",
     component : import("@/components/Submit/Submit.vue")
+  },
+  {
+    path : "/content",
+    component : import("@/components/content/V/content.vue")
+  },
+  {
+    path : "/wechat",
+    component : import("@/components/wechat/wechat.vue")
   }
 ]
 

@@ -78,7 +78,11 @@
     display: flex;
 }
 .bgBody .bgContext-left {
-    width: 80%;
+    width: 75%;
+}
+.bgBody .bgContext-right {
+    flex: 1;
+    margin-left: 20px;
 }
 
 .listDataTemplateDiv-left {
@@ -90,11 +94,17 @@
     font-size: 14px;
     font-weight: 400;
     color: #555666;
-    overflow: hidden;
+
     white-space: normal;
     word-break: break-word;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    /*
+    设置文本高度 超出后让文本不显示
+     */
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .txtBtn {
@@ -104,12 +114,6 @@
 }
 .txtBtn p {
     margin: 0;
-}
-.img16X16 {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin: 0 5px;
 }
 .txt2 {
     min-width: 22px;

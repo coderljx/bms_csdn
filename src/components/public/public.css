@@ -1,3 +1,8 @@
+@media screen and (max-width: 1200px) {
+    html,body {
+        width: 1500px;
+    }
+}
 .cursorHeader {
     cursor: default;
 }
@@ -42,4 +47,28 @@
 .gensuiParent {
     width: 100%;
     height: 100%;
+}
+.Qcolor {
+    color: #cbcac8;
+}
+.Txtcenter {
+    text-align: center;
+}
+.wid95 {
+    width: 95%;
+    margin: 0 auto;
+}
+.whiteColor {
+    background: white;
+}
+
+.wid85 {
+    width: 85%;
+    margin: 0 auto;
+}
+.img16X16 {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 5px;
 }
