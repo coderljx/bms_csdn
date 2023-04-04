@@ -24,14 +24,50 @@
     border-color: var(--el-color-primary);
 }
 
-.coverPhoto {
+.coverPhoto{
     display: flex;
+}
+.content {
+    display: flex;
+    margin: 20px 0;
 }
 .textarea {
     width: 470px;
     height: 150px;
-    margin-left: 20px;
 }
 .el-textarea__inner {
     min-height: 150px !important;
 }
+.content > span {
+    width: 150px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #606266;;
+}
+.content > div {
+    flex: 1;
+}
+.block {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+    border-radius:10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:rgba(0,0,0,0.1);
+    -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background:rgba(255,0,0,0.4);
+}
+

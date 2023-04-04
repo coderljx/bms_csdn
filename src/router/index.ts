@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path : "/Submit",
+    path : "/submit",
     component : import("@/components/Submit/Submit.vue")
   },
   {

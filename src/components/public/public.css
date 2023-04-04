@@ -41,6 +41,12 @@
 .marBo10 {
     margin-bottom: 10px;
 }
+.marLR10 {
+    margin: 0 10px 0 10px;
+}
+.mar10 {
+    margin: 10px;
+}
 .divInblok {
     display: inline-block;
 }

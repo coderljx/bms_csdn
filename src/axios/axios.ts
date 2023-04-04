@@ -10,8 +10,12 @@ const axiosInstall : AxiosInstance  = axios.create({
 
 export const httpGet = (url : string,params : object) : AxiosPromise => {
     let data = objParse(params);
-    url = userInfo(url);
-    return axiosInstall.get(url +  data);
+    if (data == null || data == "" || data == undefined) {
+        url = userInfo(url);
+    }else {
+        url = userInfo(url) + "&" + data;
+    }
+    return axiosInstall.get(url);
 }
 
 export const httpPost = (url : string,params : any) : AxiosPromise => {
