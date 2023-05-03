@@ -39,6 +39,8 @@
 .recommend2,.recommend3,.recommend4 {
     flex: 1;
     padding: 0 20px;
+    /* 超出内容不显示 用来控制超出文本显示省略号 */
+    overflow: hidden;
 }
 .recommend2-top {
     width: 40px;
@@ -58,6 +60,9 @@
 .txtHearder {
     font-weight:bold;
     color:black;
+    height: 30px;
+    width: 100%;
+    text-decoration: underline;
 }
 /*走马灯*/
 .el-carousel__container {

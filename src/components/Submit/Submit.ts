@@ -56,6 +56,7 @@ export class SubmitLogic {
         let datas = this.selectTitleName.value;
         if (datas.length >= 5) {
             MessageBox("最多选择5个标签", "error");
+            return;
         }
         let i = -1;
         datas.forEach((item: any, index: number) => {

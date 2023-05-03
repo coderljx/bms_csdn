@@ -6,7 +6,7 @@
     <div class="blogContext">
       <div class="bgColorH">
         <div class="menu public bgColorWithe cursorHoud">
-          <span v-for="(item,index) in index.moduleData.value" :key="index">{{item.moduleName}}</span>
+          <span v-for="(item,index) in indexs.moduleData.value" :key="index">{{item.moduleName}}</span>
         </div>
         <div class="public recommend">
           <div class="recommend1">
@@ -22,13 +22,12 @@
           </div>
           <div class="recommend2">
             <div class="recommend2-top">
-              <img class="imgLimit20 marRi10" src="../../assets/left.png">
-              <img class="imgLimit20" src="../../assets/right.png">
+              <img class="imgLimit20 marRi10" src="../../assets/left.png" style="visibility: hidden">
+              <img class="imgLimit20" src="../../assets/right.png" style="visibility: hidden">
             </div>
             <div class="recommend2-bottom">
-              <div class="recommendDiv" v-for="(item,index) in 5" :key="index">
-                <a class="txtHearder">Apache 顶级开源项目的突围之路！</a>
-                <a class="fontSizeLimit13 marTop5">开源发展，已经从蓝海变为红海</a>
+              <div class="recommendDiv" v-for="(item,index1) in indexs.hotText.value" :key="index1">
+                <a class="txtHearder hiddenText cursorHoud" @click="indexs.clickHotText(item)">{{item.coverTitle}}</a>
               </div>
             </div>
           </div>
@@ -43,17 +42,16 @@
                 <img class="imgLimit20" src="../../assets/right.png">
               </div>
             </div>
-            <div class="recommend2-bottom">
-              <div class="recommendDiv" v-for="(item,index) in 5" :key="index">
-                <a class="txtHearder">Apache 顶级开源项目的突围之路！</a>
-                <a class="fontSizeLimit13 marTop5">开源发展，已经从蓝海变为红海</a>
+            <div class="recommend3-bottom">
+              <div class="recommendDiv" v-for="(item,index) in indexs.hotText.value" :key="index">
+                <a class="txtHearder hiddenText cursorHoud">{{item.coverTitle}}</a>
               </div>
             </div>
           </div>
           <div class="recommend4">
               <div class="block text-center">
                 <el-carousel>
-                  <el-carousel-item v-for="item in index.advLinks.value" :key="item">
+                  <el-carousel-item v-for="item in indexs.advLinks.value" :key="item">
                     <img v-bind:src="item" />
                   </el-carousel-item>
                 </el-carousel>
@@ -68,7 +66,6 @@
 <!--          内容部分左侧               :default-active="activeIndex"  -->
           <div class="bgContext-left">
             <el-menu
-   
                 class="el-menu-demo"
                 mode="horizontal"
                 @select="handleSelect"
@@ -97,6 +94,7 @@
 
 
 <script lang="ts" setup>
+//@ts-ignore
 import {Index} from "./index"
 // 导入头部组件
 import headers from "../Header/header.vue"
@@ -105,7 +103,7 @@ import {Router} from "vue-router";
 import Mock from "mockjs";
 import activice from "@/components/index/layout/activice/activice.vue";
 
-const index = new Index();
+const indexs = new Index();
 const instanse = getCurrentInstance();
 
 

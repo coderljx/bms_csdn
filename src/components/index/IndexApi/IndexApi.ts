@@ -23,4 +23,8 @@ export class IndexApi extends Api{
         return super.httpPostStruct(apiUrl.activeApiUrl + "active/getAll",[],per_page,curr_page);
     }
 
+    public loadHotText() {
+        return super.httpGet(apiUrl.titleApiUrl + "text/getHotText", {});
+    }
+
 }

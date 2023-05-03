@@ -27,7 +27,7 @@
     height: 50px;
     float: left;
 }
-ul {
+.blogBody ul {
     margin: 0;
     padding: 0;
     float: left;
@@ -37,12 +37,14 @@ ul {
 .blogBody ul > li {
     list-style: none;
     display: inline-block;
+    height: 100%;
     line-height: 50px;
     margin-left: 20px;
     font-family: 'PingFang SC','SF Pro Display','Microsoft YaHei',Roboto,Noto,Arial,sans-serif;
     font-size: 14px;
     padding: 0 5px;
 }
+
 .blogBody ul::after,
 .blogBody li::after{
     content: "";
@@ -121,3 +123,4 @@ ul {
     font-size: 16px;
     font-family: SF Pro Display,Roboto,Noto,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;
 }
+

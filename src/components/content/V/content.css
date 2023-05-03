@@ -13,7 +13,10 @@
 
 .contentDiv .content-midd {
     flex: 1;
-    border: 1px solid red;
+}
+
+.content-midd > .html {
+    padding: 0 24px 16px;
 }
 
 .contentDiv > div {
@@ -48,14 +51,16 @@
 
 .line {
     margin-top: 10px;
-    border:1px solid #f6f6f6;
+    border: 1px solid #f6f6f6;
 }
+
 .btn001 {
     margin-top: 20px;
+    padding-bottom: 20px;
 }
+
 .follow,
-.send
-{
+.send {
     width: 100px;
 }
 
@@ -72,17 +77,62 @@
 .content-left04 {
 
 }
+
 .hot {
     height: 40px;
     line-height: 40px;
     background: #43678d;
 }
+
 .hotLinks {
     margin-top: 10px;
     height: 40px;
-    font-size : 13px;
+    font-size: 13px;
 }
+
 /* 评论*/
 .content-left05 {
     margin-top: 10px;
+}
+
+.content-midd .userInfo {
+    /*position: fixed;*/
+    position: relative;
+    z-index: 996;
+    bottom: 0;
+    box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 6%);
+}
+
+.userInfo > div {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 100%;
+}
+
+.userInfoFixed {
+    position: fixed !important;
+}
+
+.commentDiv {
+    height: 100px;
+    padding: 16px 24px;
+}
+
+.commentContent {
+    display: flex;
+}
+
+.commentContent001 {
+    width: 40px;
+}
+
+.commentImg {
+    border-radius: 50%;
+    border: 1px solid var(--CommentImg);
+}
+.comment003 {
+    /*height: 50px;*/
+    display: flex;
+    justify-content: space-between
 }
